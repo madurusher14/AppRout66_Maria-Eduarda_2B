@@ -1,0 +1,42 @@
+﻿@model QuintaApp.Models.Funcionario
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Funcionário</h2>
+
+<form action="~/Funcionario/Listar" method="post">
+    <fieldset>
+        <legend>Dados de Funcionário</legend>
+    </fieldset>
+    <br />
+    <div>
+        <label for="funcId">Código</label>
+    </div>
+    <div>
+        <input type="number" value="@Model.FuncId" name="funcId" />
+    </div>
+    <br />
+    <div>
+        <label for="FuncNome">Nome</label>
+    </div>
+    <div>
+        <input type="text" value="@Model.FuncNome" name="FuncNome" />
+    </div>
+    <br />
+    <div>
+        <label for="funcFuncao">Função</label>
+    </div>
+    <div>
+        <input type="text" value="@Model.FuncFuncao" name="FuncFuncao" />
+    </div>
+    <br/>
+    <div>
+        <input type="submit" value="Enviar" />
+    </div>
+    <br/>
+    <br/>
+    @Html.ActionLink("Voltar","Index","Home")
+
+</form>
+

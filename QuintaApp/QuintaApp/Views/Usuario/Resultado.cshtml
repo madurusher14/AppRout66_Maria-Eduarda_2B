@@ -1,0 +1,62 @@
+﻿
+
+@{
+    ViewBag.Title = "Resultado";
+}
+@* UsuId = 3,
+    UsuNome = "Mayla",
+    UsuObs = "",
+    UsuNasc = Convert.ToDateTime("15/01/2000"),
+    UsuEmail = "maylachristina@gmail.com",
+    UsuLogin = "MaylChris",
+    UsuSenha = 12345678,
+    UsuConfirmarSenha = 12345678 *@
+
+<h2>Resultado</h2>
+<div>
+    <b> Id Usuario</b>
+</div>
+<div>
+    @Model.UsuId
+</div>
+<div>
+    <b>Nome do Usuário</b>
+</div>
+
+<div>
+    @Model.UsuNome
+</div>
+
+<div>
+    <b>Observação do Usuário</b>
+</div>
+
+<div>
+    @Model.UsuObs
+</div>
+<div>
+    <b>Data de Nascimento</b>
+</div>
+<div>
+    @Model.UsuNasc
+</div>
+<div>
+    <b>E-mail do Usuário</b>
+</div>
+<div>
+    @Model.UsuEmail
+</div>
+<div>
+    <b>Nome do Login</b>
+</div>
+<div>
+    @Model.UsuLogin
+</div>
+<div>
+    <b>Senha do usuário</b>
+</div>
+<div>
+    @Model.UsuSenha
+</div>
+<br/>
+@Html.ActionLink("Voltar", "Index", "Home")

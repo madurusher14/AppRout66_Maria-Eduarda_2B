@@ -1,0 +1,78 @@
+﻿@model QuintaApp.Models.Usuario
+@{
+    ViewBag.Title = "Usuário";
+}
+
+<h2>Index</h2>
+
+<form action="~/Usuario/Resultado" method="post">
+    <fieldset>
+        <legend>Dados do Usuário</legend>
+    </fieldset>
+    <br />
+    <div>
+        <label for="UsuId">Código</label>
+    </div>
+    <div>
+        <input type="number" value="@Model.UsuId" name="UsuId" />
+    </div>
+    <br />
+   
+    <div>
+        <label for="UsuNome">Nome</label>
+    </div>
+    <div>
+        <input type="text" value="@Model.UsuNome" name="UsuNome" />
+    </div>
+    <br />
+    <div>
+        <label for="Us">Observação do Usuário</label>
+    </div>
+    <br />
+    <div>
+        <textarea name="comentário" rows="5" cols="24">Escreva seu comentário....</textarea>
+    </div>
+    <br />
+    <div>
+        <label for="Us">Data de Nascimento </label>
+    </div>
+    <div>
+        <input type="type" value="@Model.UsuNasc" name="UsuNasc" />
+    </div>
+    <br />
+    <div>
+        <label for="Us">E-mail do Usuário</label>
+    </div>
+    <div>
+        <input type="type" value="@Model.UsuEmail" name="UsuEmail" />
+    </div>
+    <br />
+    <div>
+        <label for="Us">Login do Usuário </label>
+    </div>
+    <div>
+        <input type="type" value="@Model.UsuLogin" name="UsuLogin" />
+    </div>
+    <br />
+    <div>
+        <label for="Us">Senha:</label>
+    </div>
+    <div>
+        <input type="password" value="@Model.UsuSenha" name="UsuSenha" />
+    </div>
+    <br />
+    <div>
+        <label for="Us">Confirmação da Senha </label>
+    </div>
+    
+    <div>
+        <input type="password" value="@Model.UsuConfirmarSenha" name="UsuConfirmarSenha" />
+    </div>
+    <br/>
+    <div>
+        <input type="submit" value="Enviar" />
+    </div>
+    <br />
+    @Html.ActionLink("Voltar", "Home", "Index")
+
+</form>
